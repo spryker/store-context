@@ -1,0 +1,11 @@
+post:
+    applicationContextCollection:
+        - Type:
+              type: array
+              message: ApplicationContextCollection must be an array
+
+patch:
+    applicationContextCollection:
+        - Type:
+              type: array
+              message: ApplicationContextCollection must be an array
