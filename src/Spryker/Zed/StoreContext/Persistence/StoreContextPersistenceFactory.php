@@ -20,25 +20,16 @@ use Spryker\Zed\StoreContext\StoreContextDependencyProvider;
  */
 class StoreContextPersistenceFactory extends AbstractPersistenceFactory
 {
-    /**
-     * @return \Orm\Zed\StoreContext\Persistence\SpyStoreContextQuery
-     */
     public function createStoreContextQuery(): SpyStoreContextQuery
     {
         return SpyStoreContextQuery::create();
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Persistence\Propel\Mapper\StoreContextMapper
-     */
     public function createStoreContextMapper(): StoreContextMapper
     {
         return new StoreContextMapper($this->getServiceUtilEncoding());
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Dependency\Service\StoreContextToUtilEncodingServiceInterface
-     */
     public function getServiceUtilEncoding(): StoreContextToUtilEncodingServiceInterface
     {
         return $this->getProvidedDependency(StoreContextDependencyProvider::SERVICE_UTIL_ENCODING);

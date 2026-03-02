@@ -32,19 +32,11 @@ class StoreContextWriter implements StoreContextWriterInterface
      */
     protected StoreContextEntityManagerInterface $storeContextEntityManager;
 
-    /**
-     * @param \Spryker\Zed\StoreContext\Persistence\StoreContextEntityManagerInterface $storeContextEntityManager
-     */
     public function __construct(StoreContextEntityManagerInterface $storeContextEntityManager)
     {
         $this->storeContextEntityManager = $storeContextEntityManager;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreContextCollectionRequestTransfer $storeContextCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreContextCollectionResponseTransfer
-     */
     public function createStoreContextCollection(
         StoreContextCollectionRequestTransfer $storeContextCollectionRequestTransfer
     ): StoreContextCollectionResponseTransfer {
@@ -53,11 +45,6 @@ class StoreContextWriter implements StoreContextWriterInterface
         });
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreContextCollectionRequestTransfer $storeContextCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreContextCollectionResponseTransfer
-     */
     protected function executeCreateStoreContextCollectionTransaction(
         StoreContextCollectionRequestTransfer $storeContextCollectionRequestTransfer
     ): StoreContextCollectionResponseTransfer {
@@ -74,11 +61,6 @@ class StoreContextWriter implements StoreContextWriterInterface
         return $storeContextCollectionResponseTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreContextCollectionRequestTransfer $storeContextCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreContextCollectionResponseTransfer
-     */
     public function updateStoreContextCollection(
         StoreContextCollectionRequestTransfer $storeContextCollectionRequestTransfer
     ): StoreContextCollectionResponseTransfer {
@@ -87,11 +69,6 @@ class StoreContextWriter implements StoreContextWriterInterface
         });
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreContextCollectionRequestTransfer $storeContextCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreContextCollectionResponseTransfer
-     */
     protected function executeUpdateStoreContextCollectionTransaction(
         StoreContextCollectionRequestTransfer $storeContextCollectionRequestTransfer
     ): StoreContextCollectionResponseTransfer {

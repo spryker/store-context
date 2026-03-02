@@ -109,11 +109,6 @@ class StoreContextBusinessTester extends Actor
      */
     public const TIMEZONE_BERLIN = 'Europe/Berlin';
 
-    /**
-     * @param int $idStore
-     *
-     * @return \Generated\Shared\Transfer\StoreContextTransfer
-     */
     public function haveStoreContext(int $idStore): StoreContextTransfer
     {
         $storeContextCollectionRequestTransfer = (new StoreContextCollectionRequestTransfer())
@@ -130,33 +125,21 @@ class StoreContextBusinessTester extends Actor
         return $storeContextCollectionResponseTransfer->getContexts()->offsetGet(0);
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\StoreContextFacadeInterface
-     */
     public function createStoreContextFacade(): StoreContextFacadeInterface
     {
         return new StoreContextFacade();
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\StoreContextCollectionTransfer
-     */
     public function createStoreContextCollectionTransfer(): StoreContextCollectionTransfer
     {
         return new StoreContextCollectionTransfer();
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\StoreContextFacadeInterface
-     */
     protected function getStoreContextFacade(): StoreContextFacadeInterface
     {
         return $this->getLocator()->storeContext()->facade();
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\StoreApplicationContextCollectionTransfer
-     */
     protected function createDefaultStoreApplicationContextCollectionTransfer(): StoreApplicationContextCollectionTransfer
     {
         return (new StoreApplicationContextCollectionTransfer())

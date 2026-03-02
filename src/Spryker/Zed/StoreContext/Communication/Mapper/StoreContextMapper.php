@@ -49,11 +49,6 @@ class StoreContextMapper implements StoreContextMapperInterface
         return $storeTransfers;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreContextCollectionRequestTransfer
-     */
     public function mapStoreTranferToStoreContextCollectionRequestTransfer(StoreTransfer $storeTransfer): StoreContextCollectionRequestTransfer
     {
         $storeContextCollectionRequestTransfer = new StoreContextCollectionRequestTransfer();
@@ -67,11 +62,6 @@ class StoreContextMapper implements StoreContextMapperInterface
         return $storeContextCollectionRequestTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreContextCollectionResponseTransfer $storeContextCollectionResponseTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreResponseTransfer
-     */
     public function mapStoreContextCollectionResponseTranferToStoreResponseTransfer(
         StoreContextCollectionResponseTransfer $storeContextCollectionResponseTransfer
     ): StoreResponseTransfer {

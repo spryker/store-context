@@ -47,9 +47,6 @@ class ContextStoreCollectionExpanderPluginTest extends Unit
      */
     protected StoreContextCommunicationTester $tester;
 
-    /**
-     * @return void
-     */
     public function testExpandReturnsExpandedStoreTransfer(): void
     {
         // Arrange

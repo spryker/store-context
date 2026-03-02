@@ -37,11 +37,6 @@ class StoreContextValidator implements StoreContextValidatorInterface
         $this->validatorRules = $validatorRules;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreContextCollectionRequestTransfer $storeContextCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreContextCollectionResponseTransfer
-     */
     public function validateStoreContextCollection(
         StoreContextCollectionRequestTransfer $storeContextCollectionRequestTransfer
     ): StoreContextCollectionResponseTransfer {

@@ -35,9 +35,6 @@ class DefaultContextExistRuleTest extends Unit
      */
     protected StoreContextBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testValidateStoreContextReturnsEmptyErrorTransfers(): void
     {
         // Arrange
@@ -50,9 +47,6 @@ class DefaultContextExistRuleTest extends Unit
         $this->assertEmpty($messages);
     }
 
-    /**
-     * @return void
-     */
     public function testValidateStoreContextnReturnsErrorMessageDefaultContextNotExist(): void
     {
         // Arrange
@@ -69,17 +63,11 @@ class DefaultContextExistRuleTest extends Unit
         $this->assertSame($this->tester::MESSAGE_DEFAULT_CONTEXT_NOT_EXIST, $messages[0]->getMessage());
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Validator\Rule\StoreContextValidatorRuleInterface
-     */
     protected function createDefaultConfigurationExistRule(): StoreContextValidatorRuleInterface
     {
         return new DefaultContextExistRule();
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\StoreApplicationContextCollectionTransfer
-     */
     protected function createStoreApplicationContextCollectionTransfer(): StoreApplicationContextCollectionTransfer
     {
         return (new StoreApplicationContextCollectionTransfer())->addApplicationContext(
@@ -87,9 +75,6 @@ class DefaultContextExistRuleTest extends Unit
         );
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\StoreContextTransfer
-     */
     protected function createStoreContextTransfer(): StoreContextTransfer
     {
         return (new StoreContextTransfer())->setApplicationContextCollection(

@@ -37,9 +37,6 @@ use Spryker\Zed\StoreContext\Business\Writer\StoreContextWriterInterface;
  */
 class StoreContextBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Expander\StoreExpanderInterface
-     */
     public function createStoreExpander(): StoreExpanderInterface
     {
         return new StoreExpander(
@@ -48,25 +45,16 @@ class StoreContextBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Writer\StoreContextWriterInterface
-     */
     public function createStoreContextWriter(): StoreContextWriterInterface
     {
         return new StoreContextWriter($this->getEntityManager());
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Reader\StoreContextReaderInterface
-     */
     public function createStoreContextReader(): StoreContextReaderInterface
     {
         return new StoreContextReader($this->getRepository());
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Creator\StoreContextCreatorInterface
-     */
     public function createStoreContextCreator(): StoreContextCreatorInterface
     {
         return new StoreContextCreator(
@@ -75,9 +63,6 @@ class StoreContextBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Updater\StoreContextUpdaterInterface
-     */
     public function createStoreContextUpdater(): StoreContextUpdaterInterface
     {
         return new StoreContextUpdater(
@@ -86,33 +71,21 @@ class StoreContextBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Validator\StoreContextValidatorInterface
-     */
     public function createStoreContextCreateValidator(): StoreContextValidatorInterface
     {
         return new StoreContextValidator($this->getCreateValidatorRules());
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Validator\StoreContextValidatorInterface
-     */
     public function createStoreContextUpdateValidator(): StoreContextValidatorInterface
     {
         return new StoreContextValidator($this->getUpdateValidatorRules());
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Validator\StoreContextValidatorInterface
-     */
     public function createStoreContextValidator(): StoreContextValidatorInterface
     {
         return new StoreContextValidator($this->getDefaultValidatorRules());
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Reader\TimezoneReaderInterface
-     */
     public function createTimezoneReader(): TimezoneReaderInterface
     {
         return new TimezoneReader();
@@ -159,41 +132,26 @@ class StoreContextBusinessFactory extends AbstractBusinessFactory
         ];
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Validator\Rule\StoreContextValidatorRuleInterface
-     */
     public function createTimezoneRule(): StoreContextValidatorRuleInterface
     {
         return new TimezoneRule($this->createTimezoneReader());
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Validator\Rule\StoreContextValidatorRuleInterface
-     */
     public function createOneContextPerApplicationRule(): StoreContextValidatorRuleInterface
     {
         return new OneContextPerApplicationRule($this->getConfig());
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Validator\Rule\StoreContextValidatorRuleInterface
-     */
     public function createDefaultConfigurationRule(): StoreContextValidatorRuleInterface
     {
         return new DefaultContextExistRule();
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Validator\Rule\StoreContextValidatorRuleInterface
-     */
     public function createApplicationRule(): StoreContextValidatorRuleInterface
     {
         return new ApplicationRule($this->getConfig());
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Validator\Rule\StoreContextValidatorRuleInterface
-     */
     public function createContextAlreadyExistRule(): StoreContextValidatorRuleInterface
     {
         return new ContextAlreadyExistRule(
@@ -201,9 +159,6 @@ class StoreContextBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Validator\Rule\StoreContextValidatorRuleInterface
-     */
     public function createContextNotFoundRule(): StoreContextValidatorRuleInterface
     {
         return new ContextNotFoundRule(

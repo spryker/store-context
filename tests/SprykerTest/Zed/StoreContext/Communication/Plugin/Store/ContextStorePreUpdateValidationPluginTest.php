@@ -40,9 +40,6 @@ class ContextStorePreUpdateValidationPluginTest extends Unit
      */
     protected StoreContextCommunicationTester $tester;
 
-    /**
-     * @return void
-     */
     public function testValidateReturnsCorrectStoreResponseTransfer(): void
     {
         // Arrange

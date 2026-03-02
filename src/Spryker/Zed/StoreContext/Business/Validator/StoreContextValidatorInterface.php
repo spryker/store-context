@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\StoreContextCollectionResponseTransfer;
 
 interface StoreContextValidatorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\StoreContextCollectionRequestTransfer $storeContextCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreContextCollectionResponseTransfer
-     */
     public function validateStoreContextCollection(
         StoreContextCollectionRequestTransfer $storeContextCollectionRequestTransfer
     ): StoreContextCollectionResponseTransfer;

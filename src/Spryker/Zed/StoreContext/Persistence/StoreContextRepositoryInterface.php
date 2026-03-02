@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\StoreApplicationContextCollectionTransfer;
 
 interface StoreContextRepositoryInterface
 {
-    /**
-     * @param int $idStore
-     *
-     * @return \Generated\Shared\Transfer\StoreApplicationContextCollectionTransfer|null
-     */
     public function findStoreApplicationContextCollectionByIdStore(int $idStore): ?StoreApplicationContextCollectionTransfer;
 
     /**

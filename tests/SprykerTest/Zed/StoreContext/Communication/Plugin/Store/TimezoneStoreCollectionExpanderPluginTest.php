@@ -37,9 +37,6 @@ class TimezoneStoreCollectionExpanderPluginTest extends Unit
      */
     protected const TIMEZONE_ASIA_TOKYO = 'Asia/Tokyo';
 
-    /**
-     * @return void
-     */
     public function testShouldExpandStoresWithTimezonesFromDefaultApplicationContext(): void
     {
         // Arrange
@@ -56,9 +53,6 @@ class TimezoneStoreCollectionExpanderPluginTest extends Unit
         $this->assertSame(static::TIMEZONE_EUROPE_BERLIN, $storeTransfers[1]->getTimezone());
     }
 
-    /**
-     * @return void
-     */
     public function testShouldExpandStoresWithTimezonesFromZedApplicationContext(): void
     {
         // Arrange
@@ -73,9 +67,6 @@ class TimezoneStoreCollectionExpanderPluginTest extends Unit
         $this->assertSame(static::TIMEZONE_EUROPE_BERLIN, $storeTransfers[0]->getTimezone());
     }
 
-    /**
-     * @return void
-     */
     public function testShouldNotExpandStoresWithTimezones(): void
     {
         // Arrange
@@ -90,9 +81,6 @@ class TimezoneStoreCollectionExpanderPluginTest extends Unit
         $this->assertNotSame(static::TIMEZONE_EUROPE_BERLIN, $storeTransfers[0]->getTimezone());
     }
 
-    /**
-     * @return void
-     */
     public function testShouldExpandStoresWithTimezonesFromDefaultAndZedApplicationContext(): void
     {
         // Arrange
@@ -106,13 +94,6 @@ class TimezoneStoreCollectionExpanderPluginTest extends Unit
         $this->assertSame(static::TIMEZONE_ASIA_TOKYO, $storeTransfers[0]->getTimezone());
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     * @param string|null $application
-     * @param string|null $timezone
-     *
-     * @return \Generated\Shared\Transfer\StoreTransfer
-     */
     protected function expandStoreTransferWithApplicationContext(
         StoreTransfer $storeTransfer,
         ?string $application = null,

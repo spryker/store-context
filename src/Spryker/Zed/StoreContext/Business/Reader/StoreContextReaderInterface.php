@@ -19,10 +19,5 @@ interface StoreContextReaderInterface
      */
     public function getStoreApplicationContextCollectionsIndexedByIdStore(StoreCollectionTransfer $storeCollectionTransfer): array;
 
-    /**
-     * @param int $idStore
-     *
-     * @return \Generated\Shared\Transfer\StoreApplicationContextCollectionTransfer
-     */
     public function getStoreApplicationContextCollectionByIdStore(int $idStore): StoreApplicationContextCollectionTransfer;
 }

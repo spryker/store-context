@@ -40,9 +40,6 @@ class ContextStorePostCreatePluginTest extends Unit
      */
     protected StoreContextCommunicationTester $tester;
 
-    /**
-     * @return void
-     */
     public function testExecuteReturnsCorrectStoreResponseTransfer(): void
     {
         // Arrange

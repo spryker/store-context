@@ -28,9 +28,6 @@ class TimezoneRule implements StoreContextValidatorRuleInterface
      */
     protected TimezoneReaderInterface $timezoneReader;
 
-    /**
-     * @param \Spryker\Zed\StoreContext\Business\Reader\TimezoneReaderInterface $timezoneReader
-     */
     public function __construct(TimezoneReaderInterface $timezoneReader)
     {
         $this->timezoneReader = $timezoneReader;

@@ -33,9 +33,6 @@ class StoreContextFacadeTest extends Unit
      */
     protected StoreContextBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testExpandStoreCollectionWithContextDataSuccessful(): void
     {
         // Arrange
@@ -57,9 +54,6 @@ class StoreContextFacadeTest extends Unit
         $this->assertSame($this->tester::TIMEZONE_DEFAULT, $extendedStoreTransfer->getApplicationContextCollection()->getApplicationContexts()[0]->getTimezone());
     }
 
-    /**
-     * @return void
-     */
     public function testExpandStoreCollectionIfStoreContextNotExistSuccessful(): void
     {
         // Arrange
@@ -74,9 +68,6 @@ class StoreContextFacadeTest extends Unit
         $this->assertNull($storeCollectionTranfer->getStores()[0]->getApplicationContextCollection());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateStoreContextCollectionSuccessful(): void
     {
         // Arrange
@@ -94,9 +85,6 @@ class StoreContextFacadeTest extends Unit
         $this->assertCount(0, $storeContextCollectionResponseTransfer->getErrors());
     }
 
-    /**
-     * @return void
-     */
     public function testCreateStoreContextCollectionReturnsResponseWithoutErrors(): void
     {
         // Arrange
@@ -122,9 +110,6 @@ class StoreContextFacadeTest extends Unit
         $this->assertCount(1, $storeContextCollectionResponseTransfer->getContexts());
     }
 
-    /**
-     * @return void
-     */
     public function testCreateStoreContextCollectionReturnsErrorStoreContextAlreadyExists(): void
     {
         // Arrange
@@ -151,9 +136,6 @@ class StoreContextFacadeTest extends Unit
         $this->assertSame($this->tester::MESSAGE_STORE_CONTEXT_EXISTS, $storeContextCollectionResponseTransfer->getErrors()[0]->getMessage());
     }
 
-    /**
-     * @return void
-     */
     public function testCreateStoreContextReturnErrorMessageStoreContextCollectionEmpty(): void
     {
         // Arrange
@@ -170,9 +152,6 @@ class StoreContextFacadeTest extends Unit
         $this->assertSame($this->tester::MESSAGE_STORE_CONTEXT_MISSING, $storeContextCollectionResponseTransfer->getErrors()[0]->getMessage());
     }
 
-    /**
-     * @return void
-     */
     public function testUpdateStoreContextSuccessfull(): void
     {
         // Arrange
@@ -199,9 +178,6 @@ class StoreContextFacadeTest extends Unit
         $this->assertCount(1, $storeContextCollectionResponseTransfer->getContexts());
     }
 
-    /**
-     * @return void
-     */
     public function testUpdateStoreContextReturnErrorMessageStoreContextCollectionEmpty(): void
     {
         // Arrange

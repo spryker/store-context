@@ -36,9 +36,6 @@ class ApplicationRuleTest extends Unit
      */
     protected StoreContextBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testValidateStoreContextReturnsEmptyErrorTransfers(): void
     {
         // Arrange
@@ -50,9 +47,6 @@ class ApplicationRuleTest extends Unit
         $this->assertEmpty($errorTransfers);
     }
 
-    /**
-     * @return void
-     */
     public function testValidateStoreContextReturnsErrorMessageApplicationNotValid(): void
     {
         // Arrange
@@ -69,9 +63,6 @@ class ApplicationRuleTest extends Unit
         $this->assertSame($this->tester::MESSAGE_APP_NOT_VALID, $errorMessages[0]->getMessage());
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Validator\Rule\StoreContextValidatorRuleInterface
-     */
     protected function createApplicationRule(): StoreContextValidatorRuleInterface
     {
         $mockStoreContextConfig = $this->createMock(StoreContextConfig::class);
@@ -80,9 +71,6 @@ class ApplicationRuleTest extends Unit
         return new ApplicationRule($mockStoreContextConfig);
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\StoreApplicationContextCollectionTransfer
-     */
     protected function createStoreApplicationContextCollectionTransfer(): StoreApplicationContextCollectionTransfer
     {
         return (new StoreApplicationContextCollectionTransfer())->addApplicationContext(
@@ -94,9 +82,6 @@ class ApplicationRuleTest extends Unit
         );
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\StoreContextTransfer
-     */
     protected function createStoreContextTransfer(): StoreContextTransfer
     {
         return (new StoreContextTransfer())->setApplicationContextCollection(

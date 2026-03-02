@@ -18,19 +18,11 @@ class StoreContextReader implements StoreContextReaderInterface
      */
     protected StoreContextRepositoryInterface $storeContextRepository;
 
-    /**
-     * @param \Spryker\Zed\StoreContext\Persistence\StoreContextRepositoryInterface $storeContextRepository
-     */
     public function __construct(StoreContextRepositoryInterface $storeContextRepository)
     {
         $this->storeContextRepository = $storeContextRepository;
     }
 
-    /**
-     * @param int $idStore
-     *
-     * @return \Generated\Shared\Transfer\StoreApplicationContextCollectionTransfer
-     */
     public function getStoreApplicationContextCollectionByIdStore(int $idStore): StoreApplicationContextCollectionTransfer
     {
         return $this->storeContextRepository->findStoreApplicationContextCollectionByIdStore($idStore) ?? new StoreApplicationContextCollectionTransfer();

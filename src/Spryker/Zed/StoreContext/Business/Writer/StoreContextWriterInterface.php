@@ -12,20 +12,10 @@ use Generated\Shared\Transfer\StoreContextCollectionResponseTransfer;
 
 interface StoreContextWriterInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\StoreContextCollectionRequestTransfer $storeContextCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreContextCollectionResponseTransfer
-     */
     public function createStoreContextCollection(
         StoreContextCollectionRequestTransfer $storeContextCollectionRequestTransfer
     ): StoreContextCollectionResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreContextCollectionRequestTransfer $storeContextCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreContextCollectionResponseTransfer
-     */
     public function updateStoreContextCollection(
         StoreContextCollectionRequestTransfer $storeContextCollectionRequestTransfer
     ): StoreContextCollectionResponseTransfer;

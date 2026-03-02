@@ -15,11 +15,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractRepository;
  */
 class StoreContextRepository extends AbstractRepository implements StoreContextRepositoryInterface
 {
-    /**
-     * @param int $idStore
-     *
-     * @return \Generated\Shared\Transfer\StoreApplicationContextCollectionTransfer|null
-     */
     public function findStoreApplicationContextCollectionByIdStore(int $idStore): ?StoreApplicationContextCollectionTransfer
     {
         $storeContextEntity = $this->getFactory()

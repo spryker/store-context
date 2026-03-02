@@ -29,18 +29,8 @@ interface StoreContextMapperInterface
      */
     public function mapStoreCollectionTransferToStoreTransfers(StoreCollectionTransfer $storeCollectionTransfer): array;
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreContextCollectionRequestTransfer
-     */
     public function mapStoreTranferToStoreContextCollectionRequestTransfer(StoreTransfer $storeTransfer): StoreContextCollectionRequestTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreContextCollectionResponseTransfer $storeContextCollectionResponseTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreResponseTransfer
-     */
     public function mapStoreContextCollectionResponseTranferToStoreResponseTransfer(
         StoreContextCollectionResponseTransfer $storeContextCollectionResponseTransfer
     ): StoreResponseTransfer;

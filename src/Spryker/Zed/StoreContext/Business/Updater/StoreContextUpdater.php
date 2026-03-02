@@ -24,10 +24,6 @@ class StoreContextUpdater implements StoreContextUpdaterInterface
      */
     protected StoreContextValidatorInterface $storeContextValidator;
 
-    /**
-     * @param \Spryker\Zed\StoreContext\Business\Writer\StoreContextWriterInterface $storeContextWriter
-     * @param \Spryker\Zed\StoreContext\Business\Validator\StoreContextValidatorInterface $storeContextValidator
-     */
     public function __construct(
         StoreContextWriterInterface $storeContextWriter,
         StoreContextValidatorInterface $storeContextValidator
@@ -36,11 +32,6 @@ class StoreContextUpdater implements StoreContextUpdaterInterface
         $this->storeContextValidator = $storeContextValidator;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreContextCollectionRequestTransfer $storeContextCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreContextCollectionResponseTransfer
-     */
     public function updateStoreContextCollection(
         StoreContextCollectionRequestTransfer $storeContextCollectionRequestTransfer
     ): StoreContextCollectionResponseTransfer {

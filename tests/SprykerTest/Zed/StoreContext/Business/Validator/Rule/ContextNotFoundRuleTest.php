@@ -36,9 +36,6 @@ class ContextNotFoundRuleTest extends Unit
      */
     protected StoreContextBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testValidateStoreContextReturnsEmptyErrorTransfers(): void
     {
         // Arrange
@@ -57,9 +54,6 @@ class ContextNotFoundRuleTest extends Unit
         $this->assertEmpty($errorTransfers);
     }
 
-    /**
-     * @return void
-     */
     public function testValidateStoreContextReturnsErrorMessageStoreContextNotFound(): void
     {
         // Arrange
@@ -77,9 +71,6 @@ class ContextNotFoundRuleTest extends Unit
         $this->assertSame('Store context not found for store id: %id%.', $errorMessages[0]->getMessage());
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Validator\Rule\StoreContextValidatorRuleInterface
-     */
     protected function createApplicationRule(): StoreContextValidatorRuleInterface
     {
         $readerMock = $this->createMock(StoreContextReaderInterface::class);
@@ -91,9 +82,6 @@ class ContextNotFoundRuleTest extends Unit
         return new ContextNotFoundRule($readerMock);
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\StoreContextTransfer
-     */
     protected function createStoreContextTransfer(): StoreContextTransfer
     {
         return (new StoreContextTransfer())->setStore((new StoreTransfer())->setIdStore(999));

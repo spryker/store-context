@@ -11,17 +11,7 @@ use Generated\Shared\Transfer\StoreContextTransfer;
 
 interface StoreContextEntityManagerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\StoreContextTransfer $storeContextTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreContextTransfer
-     */
     public function createStoreContext(StoreContextTransfer $storeContextTransfer): StoreContextTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreContextTransfer $storeContextTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreContextTransfer
-     */
     public function updateStoreContext(StoreContextTransfer $storeContextTransfer): StoreContextTransfer;
 }

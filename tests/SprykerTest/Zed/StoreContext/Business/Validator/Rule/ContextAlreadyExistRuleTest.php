@@ -36,9 +36,6 @@ class ContextAlreadyExistRuleTest extends Unit
      */
     protected StoreContextBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testValidateStoreContextReturnsEmptyErrorTransfers(): void
     {
         // Arrange
@@ -55,9 +52,6 @@ class ContextAlreadyExistRuleTest extends Unit
         $this->assertEmpty($errorTransfers);
     }
 
-    /**
-     * @return void
-     */
     public function testValidateStoreContextReturnsErrorMessageStoreContextAlreadyExist(): void
     {
         // Arrange
@@ -73,9 +67,6 @@ class ContextAlreadyExistRuleTest extends Unit
         $this->assertSame('Store context already exist for id: %id%.', $errorMessages[0]->getMessage());
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Validator\Rule\StoreContextValidatorRuleInterface
-     */
     protected function createApplicationRule(): StoreContextValidatorRuleInterface
     {
         $readerMock = $this->createMock(StoreContextReaderInterface::class);
@@ -87,9 +78,6 @@ class ContextAlreadyExistRuleTest extends Unit
         return new ContextAlreadyExistRule($readerMock);
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\StoreApplicationContextCollectionTransfer
-     */
     protected function createStoreApplicationContextCollectionTransfer(): StoreApplicationContextCollectionTransfer
     {
         return (new StoreApplicationContextCollectionTransfer())->addApplicationContext(
@@ -101,9 +89,6 @@ class ContextAlreadyExistRuleTest extends Unit
         );
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\StoreContextTransfer
-     */
     protected function createStoreContextTransfer(): StoreContextTransfer
     {
         return (new StoreContextTransfer())->setApplicationContextCollection(

@@ -19,9 +19,6 @@ use Spryker\Zed\StoreContext\Communication\Mapper\StoreContextMapperInterface;
  */
 class StoreContextCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\StoreContext\Communication\Mapper\StoreContextMapperInterface
-     */
     public function createStoreContextMapper(): StoreContextMapperInterface
     {
         return new StoreContextMapper();

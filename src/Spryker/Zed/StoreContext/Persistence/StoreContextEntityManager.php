@@ -16,11 +16,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractEntityManager;
  */
 class StoreContextEntityManager extends AbstractEntityManager implements StoreContextEntityManagerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\StoreContextTransfer $storeContextTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreContextTransfer
-     */
     public function createStoreContext(StoreContextTransfer $storeContextTransfer): StoreContextTransfer
     {
         $storeContextEntity = $this->getFactory()
@@ -36,11 +31,6 @@ class StoreContextEntityManager extends AbstractEntityManager implements StoreCo
             );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreContextTransfer $storeContextTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreContextTransfer
-     */
     public function updateStoreContext(StoreContextTransfer $storeContextTransfer): StoreContextTransfer
     {
         $storeContextEntity = $this->getFactory()

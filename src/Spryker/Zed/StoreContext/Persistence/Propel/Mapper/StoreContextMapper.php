@@ -19,20 +19,11 @@ class StoreContextMapper
      */
     protected StoreContextToUtilEncodingServiceInterface $utilEncodingService;
 
-    /**
-     * @param \Spryker\Zed\StoreContext\Dependency\Service\StoreContextToUtilEncodingServiceInterface $utilEncodingService
-     */
     public function __construct(StoreContextToUtilEncodingServiceInterface $utilEncodingService)
     {
         $this->utilEncodingService = $utilEncodingService;
     }
 
-    /**
-     * @param \Orm\Zed\StoreContext\Persistence\SpyStoreContext $storeContextEntity
-     * @param \Generated\Shared\Transfer\StoreApplicationContextCollectionTransfer $storeApplicationContextCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreApplicationContextCollectionTransfer
-     */
     public function mapStoreContextEntityToStoreApplicationContextCollectionTransfer(
         SpyStoreContext $storeContextEntity,
         StoreApplicationContextCollectionTransfer $storeApplicationContextCollectionTransfer
@@ -48,12 +39,6 @@ class StoreContextMapper
         return $storeApplicationContextCollectionTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreContextTransfer $storeContextTransfer
-     * @param \Orm\Zed\StoreContext\Persistence\SpyStoreContext $storeContextEntity
-     *
-     * @return \Orm\Zed\StoreContext\Persistence\SpyStoreContext
-     */
     public function mapStoreContextTransferToStoreContextEntity(
         StoreContextTransfer $storeContextTransfer,
         SpyStoreContext $storeContextEntity
@@ -66,12 +51,6 @@ class StoreContextMapper
         return $storeContextEntity;
     }
 
-    /**
-     * @param \Orm\Zed\StoreContext\Persistence\SpyStoreContext $storeContextEntity
-     * @param \Generated\Shared\Transfer\StoreContextTransfer $storeContextTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreContextTransfer
-     */
     public function mapStoreContextEntityToStoreContextTransfer(
         SpyStoreContext $storeContextEntity,
         StoreContextTransfer $storeContextTransfer

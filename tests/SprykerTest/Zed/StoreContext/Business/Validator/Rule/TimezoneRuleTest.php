@@ -36,9 +36,6 @@ class TimezoneRuleTest extends Unit
      */
     protected StoreContextBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testValidateStoreContextReturnsEmptyMessages(): void
     {
         // Arrange
@@ -56,9 +53,6 @@ class TimezoneRuleTest extends Unit
         $this->assertEmpty($messages);
     }
 
-    /**
-     * @return void
-     */
     public function testValidateStoreContextReturnsErrorMessage(): void
     {
         // Arrange
@@ -78,9 +72,6 @@ class TimezoneRuleTest extends Unit
         $this->assertSame('Timezone %timezone% is not valid.', $messages[0]->getMessage());
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Validator\Rule\StoreContextValidatorRuleInterface
-     */
     protected function createTimezoneRule(): StoreContextValidatorRuleInterface
     {
         return new TimezoneRule(
@@ -88,9 +79,6 @@ class TimezoneRuleTest extends Unit
         );
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\StoreContextTransfer
-     */
     protected function createStoreContextTransfer(): StoreContextTransfer
     {
         return (new StoreContextTransfer())->setApplicationContextCollection(

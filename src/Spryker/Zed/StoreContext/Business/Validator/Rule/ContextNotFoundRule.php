@@ -28,9 +28,6 @@ class ContextNotFoundRule implements StoreContextValidatorRuleInterface
      */
     protected StoreContextReaderInterface $storeContextReader;
 
-    /**
-     * @param \Spryker\Zed\StoreContext\Business\Reader\StoreContextReaderInterface $storeContextReader
-     */
     public function __construct(StoreContextReaderInterface $storeContextReader)
     {
         $this->storeContextReader = $storeContextReader;

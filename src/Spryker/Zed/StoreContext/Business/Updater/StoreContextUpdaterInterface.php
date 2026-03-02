@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\StoreContextCollectionResponseTransfer;
 
 interface StoreContextUpdaterInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\StoreContextCollectionRequestTransfer $storeCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreContextCollectionResponseTransfer
-     */
     public function updateStoreContextCollection(StoreContextCollectionRequestTransfer $storeCollectionRequestTransfer): StoreContextCollectionResponseTransfer;
 }

@@ -42,9 +42,6 @@ class OneContextPerApplicationRuleTest extends Unit
      */
     protected StoreContextBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testValidateStoreContextReturnsEmptyArray(): void
     {
         // Arrange
@@ -57,9 +54,6 @@ class OneContextPerApplicationRuleTest extends Unit
         $this->assertEmpty($messages);
     }
 
-    /**
-     * @return void
-     */
     public function testValidateStoreContextReturnsErrorMessageApplicationUsedMoreThenOnce(): void
     {
         // Arrange
@@ -78,9 +72,6 @@ class OneContextPerApplicationRuleTest extends Unit
         $this->assertSame(static::MESSAGE_APPLICATION_USED_MORE_THAN_ONCE, $messages[0]->getMessage());
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\StoreApplicationContextCollectionTransfer
-     */
     protected function createStoreApplicationContextCollectionTransfer(): StoreApplicationContextCollectionTransfer
     {
         return (new StoreApplicationContextCollectionTransfer())->addApplicationContext(
@@ -90,9 +81,6 @@ class OneContextPerApplicationRuleTest extends Unit
         );
     }
 
-    /**
-     * @return \Spryker\Zed\StoreContext\Business\Validator\Rule\StoreContextValidatorRuleInterface
-     */
     protected function createOneContextPerApplicationRule(): StoreContextValidatorRuleInterface
     {
         $mockStoreContextConfig = $this->createMock(StoreContextConfig::class);
@@ -101,9 +89,6 @@ class OneContextPerApplicationRuleTest extends Unit
         return new OneContextPerApplicationRule($mockStoreContextConfig);
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\StoreContextTransfer
-     */
     protected function createStoreContextTransfer(): StoreContextTransfer
     {
         return (new StoreContextTransfer())->setApplicationContextCollection(

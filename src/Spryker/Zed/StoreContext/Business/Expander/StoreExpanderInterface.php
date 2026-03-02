@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\StoreCollectionTransfer;
 
 interface StoreExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\StoreCollectionTransfer $storeCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreCollectionTransfer
-     */
     public function expandStoreCollectionTransferWithStoreContext(StoreCollectionTransfer $storeCollectionTransfer): StoreCollectionTransfer;
 
     /**

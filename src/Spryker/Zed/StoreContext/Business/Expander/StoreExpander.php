@@ -14,21 +14,12 @@ use Spryker\Zed\StoreContext\StoreContextConfig;
 
 class StoreExpander implements StoreExpanderInterface
 {
-    /**
-     * @param \Spryker\Zed\StoreContext\Business\Reader\StoreContextReaderInterface $storeContextReader
-     * @param \Spryker\Zed\StoreContext\StoreContextConfig $storeContextConfig
-     */
     public function __construct(
         protected StoreContextReaderInterface $storeContextReader,
         protected StoreContextConfig $storeContextConfig
     ) {
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreCollectionTransfer $storeCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreCollectionTransfer
-     */
     public function expandStoreCollectionTransferWithStoreContext(StoreCollectionTransfer $storeCollectionTransfer): StoreCollectionTransfer
     {
         $indexedStoreApplicationContextCollectionTransfer = $this->storeContextReader->getStoreApplicationContextCollectionsIndexedByIdStore($storeCollectionTransfer);
@@ -56,11 +47,6 @@ class StoreExpander implements StoreExpanderInterface
         return $expandedStoreTransfers;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     *
-     * @return \Generated\Shared\Transfer\StoreTransfer
-     */
     protected function expandStoreWithTimezone(StoreTransfer $storeTransfer): StoreTransfer
     {
         if ($storeTransfer->getApplicationContextCollection() === null) {

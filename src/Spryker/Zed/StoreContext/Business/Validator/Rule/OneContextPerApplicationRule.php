@@ -29,9 +29,6 @@ class OneContextPerApplicationRule implements StoreContextValidatorRuleInterface
      */
     protected StoreContextConfig $storeContextConfig;
 
-    /**
-     * @param \Spryker\Zed\StoreContext\StoreContextConfig $storeContextConfig
-     */
     public function __construct(StoreContextConfig $storeContextConfig)
     {
         $this->storeContextConfig = $storeContextConfig;
@@ -54,11 +51,6 @@ class OneContextPerApplicationRule implements StoreContextValidatorRuleInterface
         return $errorTransfers;
     }
 
-    /**
-     * @param string $storeContextApplication
-     *
-     * @return \Generated\Shared\Transfer\ErrorTransfer
-     */
     protected function createErrorTransfer(string $storeContextApplication): ErrorTransfer
     {
         return (new ErrorTransfer())

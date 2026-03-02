@@ -28,9 +28,6 @@ class ApplicationRule implements StoreContextValidatorRuleInterface
      */
     protected StoreContextConfig $storeContextConfig;
 
-    /**
-     * @param \Spryker\Zed\StoreContext\StoreContextConfig $storeContextConfig
-     */
     public function __construct(StoreContextConfig $storeContextConfig)
     {
         $this->storeContextConfig = $storeContextConfig;
