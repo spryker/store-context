@@ -4,13 +4,17 @@ resource:
 
     properties:
         applicationContextCollection:
-            type: array
+            type: object
+            objectName: ApplicationContextCollection
             description: Collection of application contexts with their configurations. Must contain an object with an applicationContexts array. Each context defines application-specific settings (timezone, etc.) for different applications (GLUE_BACKEND, GLUE_STOREFRONT, YVES, ZED).
             writable: true
-            openapiContext:
-                example:
-                    applicationContexts:
-                        - application: null
-                          timezone: Europe/Berlin
-                        - application: GLUE_BACKEND
-                          timezone: Europe/Berlin
+            properties:
+                applicationContexts:
+                    type: array
+                    description: 'List of application contexts, each defining application-specific settings.'
+                    openapiContext:
+                        example:
+                            [
+                                { application: null, timezone: Europe/Berlin },
+                                { application: GLUE_BACKEND, timezone: Europe/Berlin },
+                            ]
