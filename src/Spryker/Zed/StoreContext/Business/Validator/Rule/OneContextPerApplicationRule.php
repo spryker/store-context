@@ -68,8 +68,6 @@ class OneContextPerApplicationRule implements StoreContextValidatorRuleInterface
      */
     protected function countStoreContextsPerApplications(StoreApplicationContextCollectionTransfer $storeApplicationContextCollectionTransfer): array
     {
-        $storeContextApplications = $this->storeContextConfig->getStoreContextApplications();
-
         $storeContextApplicationsCount = [];
 
         /**
